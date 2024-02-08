@@ -1,17 +1,13 @@
 const mongoose = require('mongoose')
 
 const blogSchema = mongoose.Schema({
-    title: {
-        type: String,
-        require: true
-    },
     content: {
         type: String,
         require: true
     },
-    image: {
+    image: [{
         type: String,
-    },
+    }],
     comment: {
         type: mongoose.Types.ObjectId,
         ref: 'comment'
